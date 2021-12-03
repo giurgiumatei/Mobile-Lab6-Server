@@ -14,9 +14,9 @@ export class IndividualStore {
   }
   
   async insert(individual) {
-    let individualText = individual.text;
+    let individualText = individual.name;
     if (!individualText) { // validation
-      throw new Error('Missing text property')
+      throw new Error('Missing name property')
     }
     return this.store.insert(individual);
   };
